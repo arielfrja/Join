@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+def archiveName = "vosk-android"
+def pomName = "Vosk Android"
+def pomDescription = "Vosk speech recognition library for Android"
+
+repositories {
+    google()
+    maven {
+        url 'https://alphacephei.com/maven/'
+    }
+}
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        archivesBaseName = archiveName
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+task buildVosk(type: Exec) {
+    commandLine './build-vosk.sh'
+    environment ANDROID_NDK_HOME: android.getSdkDirectory()
+}
+
+dependencies {
+    implementation 'net.java.dev.jna:jna:4.4.0@aar'
+    implementation group: 'com.alphacephei', name: 'vosk-android', version: '0.3.23'
+}
+
+//preBuild.dependsOn buildVosk
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            artifactId = archiveName
+            artifact("$buildDir/outputs/aar/$archiveName-release.aar")
+            pom {
+                name = pomName
+                description = pomDescription
+            }
+        }
+    }
+}

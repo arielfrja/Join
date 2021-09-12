@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Join</string>
+    <string name="channel_recognition_name">word recongized</string>
+    <string name="channel_recognition_description">when green or red word reconnized notification created in this channel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
