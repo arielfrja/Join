@@ -1,6 +1,5 @@
+
 include ':model-en'
-include ':lib'
 include ':app'
-project(':lib').projectDir = new File(rootDir, 'android/lib/')
-project(':model-en').projectDir = new File(rootDir, 'android/model-en/')
+project(':model-en').projectDir = new File(rootDir, 'model-en/')
 rootProject.name = "Join"

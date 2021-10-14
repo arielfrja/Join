@@ -3,24 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/recognitionFragment">
 
     <fragment
-        android:id="@+id/addWordFragment"
-        android:name="com.arielfaridja.join.AddWordFragment"
-        android:label="fragment_add_word"
-        tools:layout="@layout/fragment_add_word" >
+        android:id="@+id/recognitionFragment"
+        android:name="com.arielfaridja.join.RecognitionFragment"
+        android:label="fragment_recognition"
+        tools:layout="@layout/fragment_recognition">
         <action
-            android:id="@+id/action_addWordFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_recognitionFragment_to_editWordsFragment"
+            app:destination="@id/editWordsFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.arielfaridja.join.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:id="@+id/editWordsFragment"
+        android:name="com.arielfaridja.join.EditWordsFragment"
+        android:label="fragment_edit_words"
+        tools:layout="@layout/fragment_edit_words">
         <action
-            android:id="@+id/action_mainFragment_to_addWordFragment"
-            app:destination="@id/addWordFragment" />
+            android:id="@+id/action_editWordsFragment_to_recognitionFragment"
+            app:destination="@id/recognitionFragment"
+            app:popUpTo="@+id/recognitionFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
 </navigation>

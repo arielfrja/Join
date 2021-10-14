@@ -2,6 +2,29 @@
     <string name="app_name">Join</string>
     <string name="channel_recognition_name">word recongized</string>
     <string name="channel_recognition_description">when green or red word reconnized notification created in this channel</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="green_notification">🟢🟢🟢🟢</string>
+    <string name="red_notification">🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴</string>
+    <string name="word_edit_dialog_title">Words edited</string>
+    <string name="word_edit_dialog_message">Are you sure you want to save the changes?</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_thanks">No thanks</string>
+    <string name="word_edit_back_pressed_message">Are you sure you want to leave without saving?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="settings">settings</string>
+    <string name="add_a_word">Add a word</string>
+    <string name="edit_words">Edit words</string>
+    <string name="add_words">Add words</string>
+    <string name="snackbar_message">"Hey! you can write words if you want"</string>
+    <string name="listening">I\'m listening...</string>
+    <string name="home">Home</string>
+    <string name="casual">Casual</string>
+    <string name="casual_title">Casual:</string>
+    <string name="enter_new_words_here">Enter new words here</string>
+    <string name="content_description_ic_check_circle">check circle icon</string>
+    <string name="danger_title">Danger:</string>
+    <string name="add">Add</string>
+    <string name="we_noticed_someone_around_you_is_talk_about">We noticed someone around you is talk about</string>
+    <string name="got_it">Got it</string>
 </resources>
