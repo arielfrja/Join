@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.arielfaridja.join.databinding.ActivityMainBinding
 
@@ -20,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
     internal lateinit var binding: ActivityMainBinding
-    internal var redWords = arrayListOf("pay attention", "stop", "be careful")
-    internal var greenWords = arrayListOf("art show", "museum", "artshow")
+
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
             if (isGranted) {
@@ -47,9 +48,19 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.recognitionFragment)
 
         }
+        NavigationUI.setupWithNavController(binding.bottomNavView, navController)
+        setDestinations()
     }
 
-
+    private fun setDestinations() {
+        binding.bottomNavView.setOnItemSelectedListener { menuItem ->
+            if (menuItem.itemId == R.id.recognitionFragment)
+                findNavController(R.id.nav_host_fragment).navigate(R.id.recognitionFragment)
+            if (menuItem.itemId == R.id.editWordsFragment)
+                findNavController(R.id.nav_host_fragment).navigate(R.id.editWordsFragment)
+            true
+        }
+    }
 
 
     private fun getPermissions() {

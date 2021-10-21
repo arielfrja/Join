@@ -15,10 +15,10 @@ android {
 
     defaultConfig {
         applicationId "com.arielfaridja.join"
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 6
+        versionName '2.3'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resConfigs("en")
