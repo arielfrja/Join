@@ -17,11 +17,11 @@ android {
         applicationId "com.arielfaridja.join"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 6
-        versionName '2.3'
+        versionCode 7
+        versionName '1.0.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        resConfigs("en")
+        resConfigs 'en'
     }
 
     buildFeatures {
